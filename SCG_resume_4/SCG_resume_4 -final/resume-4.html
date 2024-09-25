@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <!-- <link rel="stylesheet" href="style_4.css"> -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial Narrow", Arial, sans-serif;
+      }
+
+      .main-body-4 {
+        margin: 0 auto;
+        min-height: 100vh;
+        color: #000000;
+        position: relative;
+        max-width: 790px;
+        box-shadow: 0 35px 55px rgba(0, 0, 0, 0.2);
+        padding-top: 20px;
+        background: #ffffff;
+        overflow-x: hidden;
+      }
+      .test-4 {
+        position: relative;
+        /* margin: 0px 0 0 -20px; */
+        background-color: #e3707f;
+        color: #ffffff;
+        padding: 10px 30px 20px 30px;
+        z-index: 999;
+      }
+
+      .qr-image-4 img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      .resume-gap-4 {
+        margin-right: 20px;
+      }
+      .resume-4 {
+        position: absolute;
+        background: #ffffff;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        /* top: 0px; */
+      }
+
+      .resume-4 .left-side-4 {
+        position: relative;
+        background: #484848;
+        padding: 30px;
+        margin-left: 20px;
+        color: #000000;
+        z-index: 1000;
+      }
+      .profile-text-4 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      .profile-4 {
+        position: relative;
+        background: #484848;
+        border-left: 20px solid #e3707f;
+      }
+
+      .profile-img-4 {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        background: #484848;
+        padding: 30px 30px 20px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20px; /* Use negative margin to move the image up */
+      }
+
+      .profile-img-4::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        z-index: 1;
+      }
+
+      /* .profile-img-4 {
+            width: 100%; 
+            text-align: center;
+            background: #484848;padding: 40px 30px 40px 30px;
+            border-left: 20px solid #E3707F;
+            margin-top: -20px;
+        } */
+
+      .profile-img-4 img {
+        width: 180px;
+        height: 180px;
+        position: relative;
+        z-index: 1;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .resume-4 .right-side-4 {
+        background: #ffffff;
+        padding: 30px;
+      }
+      .sub-heading-4 {
+        color: #e3707f;
+        text-align: left;
+        font-size: 20px;
+        border-bottom: 2px solid #ffffff;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        font-weight: 700;
+      }
+      .contact-details-4 {
+        list-style: none;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        padding: 4px 10px 10px 0;
+        line-height: 140%;
+        color: #ffffff;
+      }
+      .contact-heading-4 {
+        margin-top: 10px;
+        color: #ffffff;
+      }
+      .education-heading-4 {
+        color: #ffffff;
+      }
+
+      .education-4-details-4 {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: left;
+        padding: 3px 0 0 0;
+        color: #ffffff;
+      }
+      .education-4 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .skill-4 {
+        list-style-type: none;
+        padding: 10px 0 10px 0;
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        color: #ffffff;
+      }
+
+      .skill-4 li {
+        width: 50%;
+        padding: 5px 0;
+      }
+
+      .skill-4 li:nth-child(odd) {
+        float: right;
+      }
+
+      .skill-4 li:nth-child(even) {
+        float: left;
+      }
+
+      .language-4 {
+        list-style: none;
+        margin: 0;
+        padding: 5px 0 10px 0;
+        position: relative;
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        color: #ffffff;
+      }
+
+      .language-4 li {
+        flex: 0 1 calc(50% - 10px);
+        padding: 10px 10px 0 0;
+        box-sizing: border-box;
+        font-weight: 700;
+      }
+
+      .interest-4 {
+        list-style: none;
+        margin: 0;
+        padding: 5px 0 10px 0;
+        position: relative;
+        font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        color: #ffffff;
+      }
+
+      .interest-4 li {
+        flex: 0 1 calc(50% - 10px);
+        padding: 10px 10px 0 0;
+        box-sizing: border-box;
+        font-weight: 700;
+      }
+
+      .resume-name-4 {
+        color: #ffffff;
+        font-size: 42px;
+        font-weight: 400;
+      }
+      .first-name-4 {
+        color: #ffffff;
+        font-size: 42px;
+        font-weight: 900;
+        margin-right: 15px;
+      }
+      .resume-4-display {
+        display: flex;
+        justify-content: space-between;
+      }
+      .resume-designation-4 {
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 2px;
+        text-align: left;
+        color: #ffffff;
+        padding: 10px 0;
+      }
+      .resume-about-4 {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: justify;
+      }
+      .experience-4 {
+        font-weight: 700;
+        color: #484848;
+        border-bottom: 2px solid #000;
+        padding-bottom: 5px;
+      }
+
+      .resume-experience-4 {
+        position: relative;
+        padding: 10px 0;
+      }
+
+      .job-4 {
+        list-style: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .job-4-year {
+        margin-bottom: 5px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .job-4::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .timeline-line-4 {
+        width: 2px;
+        background-color: #000000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 5px;
+        z-index: 0;
+      }
+
+      .job-content-4 {
+        padding-left: 25px;
+        box-sizing: border-box;
+      }
+
+      .company-name-4 {
+        padding: 5px 0;
+      }
+
+      .job-4-position {
+        padding: 5px 0;
+        font-size: 16px;
+      }
+
+      .job-4-description {
+        text-align: justify;
+        padding-bottom: 20px;
+      }
+
+      .job-4:last-child .job-4-description {
+        padding-bottom: 0;
+      }
+
+      .reference-4 {
+        font-weight: 700;
+        color: #484848;
+        padding-block: 5px;
+        border-bottom: 2px solid #000;
+      }
+      .resume-reference-4 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px 0 0px 0;
+      }
+
+      .ref-4 {
+        flex: 0 1 calc(50% - 10px);
+        box-sizing: border-box;
+      }
+      .resume-right-4 .ref-4 {
+        color: black;
+        font-size: 14px;
+      }
+      .ref-4 p {
+        line-height: 15px;
+      }
+      .resume-right-4 .ref-4 span {
+        font-weight: bolder;
+      }
+      .ref-name-4 {
+        padding: 4px 0 4px 0;
+        font-size: 18px;
+      }
+      .ref-position-4,
+      .ref-phone-4,
+      .ref-email-4 {
+        padding: 3px 0 3px 0;
+      }
+      .contact-link-44,
+      .contact-link-4 {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .contact-link-44:hover {
+        color: #e3707f;
+        text-decoration: underline;
+      }
+      .contact-link-4:hover {
+        color: #e3707f;
+        text-decoration: underline;
+      }
+      .resume-up {
+        display: grid;
+        grid-template-columns: 30% 70%;
+      }
+
+      /* Responsive Design */
+
+      @media screen and (max-width: 768px) {
+        .profile-img-4 img {
+          width: 24vw;
+          height: 24vw;
+        }
+        .resume-4 .right-side-4 {
+          padding: 25px;
+        }
+        .job-content-4 {
+          padding-left: 25px;
+        }
+        .resume-4 .left-side-4 {
+          padding: 30px 20px;
+        }
+        .qr-image-4 img {
+          width: 12vw;
+          height: 12vw;
+        }
+      }
+
+      @media screen and (max-width: 525px) {
+        .test-4 {
+          padding: 15px;
+        }
+        .resume-4 .left-side-4 {
+          padding: 15px;
+        }
+        .resume-4 .right-side-4 {
+          padding: 15px;
+        }
+        .job-content-4 {
+          padding-left: 15px;
+        }
+        .sub-heading-4,
+        .job-4-position,
+        .ref-name-4 {
+          font-size: 16px;
+        }
+        .sub-heading-4 {
+          padding-top: 20px;
+        }
+
+        .sub-heading-4:first-child {
+          padding-top: 0px;
+        }
+        .company-name-4 {
+          font-size: 13px;
+          padding: 0;
+        }
+        .experience-4,
+        .reference-4 {
+          font-size: 18px;
+        }
+
+        .contact-link-4,
+        .contact-details-4,
+        .education-4-details-4,
+        .skill-4,
+        .language-4,
+        .interest-4 {
+          font-size: 13px;
+        }
+        .contact-details-4 {
+          padding: 4px 10px 5px 0;
+        }
+        .contact-heading-4 {
+          margin-top: 5px;
+        }
+        .resume-about-4,
+        .job-4-description {
+          font-size: 12px;
+        }
+        .contact-heading-4,
+        .education-heading-4,
+        .job-4-year,
+        .ref-position-4,
+        .ref-phone-4,
+        .ref-email-4 {
+          font-size: 14px;
+        }
+
+        .skill-4 li {
+          width: 100%;
+          padding: 5px 0;
+        }
+        .resume-name-4,
+        .first-name-4 {
+          font-size: 28px;
+        }
+        .resume-designation-4 {
+          font-size: 16px;
+          padding: 5px 0;
+        }
+        .resume-about-4 {
+          padding: 0;
+        }
+        .job-4-description {
+          padding-bottom: 15px;
+        }
+        .ref-4 {
+          flex: 100%;
+        }
+        .qr-image-4 {
+          display: flex;
+          align-items: center;
+        }
+        .job-content-4 {
+          padding-left: 15px;
+        }
+        .job-4::before {
+          width: 7px;
+          height: 7px;
+        }
+
+        .timeline-line-4 {
+          left: 4px;
+        }
+        .resume-gap-4 {
+          margin-right: 15px;
+        }
+      }
+      @media screen and (max-width: 425px) {
+        .resume-4 .left-side-4 {
+          padding: 13px 10px;
+        }
+        .profile-img-4 img {
+          width: 28vw;
+          height: 28vw;
+        }
+        .resume-4 .right-side-4 {
+          padding: 10px;
+        }
+        .resume-4 {
+          display: grid;
+          grid-template-columns: 35% 65%;
+        }
+        .resume-up {
+          display: grid;
+          grid-template-columns: 35% 65%;
+        }
+
+        .resume-designation-4 {
+          font-size: 16px;
+        }
+        .resume-gap-4 {
+          margin-right: 10px;
+        }
+        /* .resume-about-4 {
+            padding: 5px 0 10px 0;
+            } */
+        .contact-link-4,
+        .contact-details-4,
+        .education-4-details-4,
+        .skill-4,
+        .language-4,
+        .interest-4 {
+          font-size: 11px;
+        }
+
+        .resume-name-4,
+        .first-name-4 {
+          font-size: 24px;
+        }
+        .resume-reference-4 {
+          gap: 10px;
+        }
+        .test-4 {
+          padding: 10px;
+        }
+        .profile-img-4 {
+          padding: 40px 30px 0px 30px;
+        }
+        .resume-4 .left-side-4 {
+          margin-left: 10px;
+        }
+        .profile-4 {
+          border-left: 10px solid #e3707f;
+        }
+        .main-body-4 {
+          padding-top: 10px;
+        }
+      }
+      @media screen and (max-width: 375px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-body-4">
+      <div>
+        <div class="resume-up">
+          <div class="profile-4">
+            <div class="profile-img-4">
+              <img src="img/formal-pic-1.png" alt="Profile-image" />
+            </div>
+          </div>
+          <div class="test-4">
+            <h1 class="resume-name-4">
+              <span class="first-name-4">Pronub</span>Shaharier
+            </h1>
+            <div class="resume-4-display">
+              <div class="resume-gap-4">
+                <h2 class="resume-designation-4">Marketing Manager</h2>
+                <p class="resume-about-4">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Atque nam maiores nobis qui repellat iste repellendus porro
+                  rem dolores, voluptatem rerum dolorum amet ratione odio
+                  temporibus, pariatur blanditiis explicabo labore.
+                </p>
+              </div>
+              <div class="qr-image-4">
+                <img src="img/QR.png" alt="Qr Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-4">
+          <!---left portion starts from here-->
+          <div class="left-side-4">
+            <div class="profile-text-4">
+              <!-- Contact part -->
+
+              <div class="contact-text-4">
+                <h2 class="sub-heading-4">Contact</h2>
+                <ul>
+                  <h4 class="contact-heading-4">Phone</h4>
+                  <li class="contact-details-4">
+                    <a href="tel:123-456-7890" class="contact-link-4"
+                      >123-456-7890</a
+                    >
+                  </li>
+                  <h4 class="contact-heading-4">Email</h4>
+                  <li class="contact-details-4">
+                    <a href="mailto:mail@domainname.com" class="contact-link-4"
+                      >mail@domainname.com</a
+                    >
+                  </li>
+                  <h4 class="contact-heading-4">Address</h4>
+                  <li class="contact-details-4">
+                    <p>
+                      0-51, Janata Co-operative Housing Society, Ring Road,
+                      Mohammadpur, Dhaka Bangladesh
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <!-- education part -->
+
+              <div class="education-4-text">
+                <h2 class="sub-heading-4">education</h2>
+
+                <ul class="education-4">
+                  <div style="margin-bottom: 15px">
+                    <li class="education-4-details-4">2008</li>
+                    <h4 class="education-heading-4">Enter Your Degree</h4>
+                    <li class="education-4-details-4">Grade</li>
+                    <li class="education-4-details-4">University/Collage</li>
+                  </div>
+                  <div style="margin-bottom: 15px">
+                    <li class="education-4-details-4">2008</li>
+                    <h4 class="education-heading-4">Enter Your Degree</h4>
+                    <li class="education-4-details-4">Grade</li>
+                    <li class="education-4-details-4">University/Collage</li>
+                  </div>
+                </ul>
+              </div>
+              <!-- skill part -->
+
+              <div class="skill-4-text">
+                <h2 class="sub-heading-4">skill</h2>
+
+                <ul class="skill-4">
+                  <li>UI/UX</li>
+                  <li>Visual Design</li>
+                  <li>Wireframes</li>
+                  <li>Storyboards</li>
+                  <li>User Flows</li>
+                  <li>Process Flows</li>
+                </ul>
+              </div>
+
+              <!-- language part -->
+
+              <div class="language-4-text">
+                <h2 class="sub-heading-4">language</h2>
+
+                <ul class="language-4">
+                  <li>ENGLISH</li>
+                  <li>BANGLA</li>
+                  <li>BANGLA</li>
+                </ul>
+              </div>
+
+              <!-- interest part -->
+
+              <div class="interest-4-text">
+                <h2 class="sub-heading-4">interest</h2>
+                <ul class="interest-4">
+                  <li>Music</li>
+                  <li>Singing</li>
+                  <li>Reading</li>
+                  <li>Music</li>
+                  <li>Singing</li>
+                  <li>Reading</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!---left portion ends here-->
+
+          <!---right portion starts from here-->
+          <div class="right-side-4">
+            <!-- Experience part -->
+
+            <div>
+              <h2 class="experience-4">Experience</h2>
+              <ul class="resume-experience-4">
+                <li class="job-4">
+                  <div class="timeline-line-4"></div>
+                  <div class="job-content-4">
+                    <p class="job-4-year">2019 - 2022</p>
+                    <p class="company-name-4">
+                      Company Name | 123 Anywhere St. Any City
+                    </p>
+                    <h3 class="job-4-position">Job Position Here</h3>
+                    <p class="job-4-description">
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                      enim ipsam voluptatem quia voluptas sit aspernatur aut
+                      odit aut fugit, sed quia consequuntur magni dolores eos
+                      qui ratione voluptatem sequi nesciunt. Neque porro
+                      quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci velit.
+                    </p>
+                  </div>
+                </li>
+                <li class="job-4">
+                  <div class="timeline-line-4"></div>
+                  <div class="job-content-4">
+                    <p class="job-4-year">2017 - 2019</p>
+                    <p class="company-name-4">
+                      Company Name | 123 Anywhere St. Any City
+                    </p>
+                    <h3 class="job-4-position">Job Position Here</h3>
+                    <p class="job-4-description">
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                      enim ipsam voluptatem quia voluptas sit aspernatur aut
+                      odit aut fugit, sed quia consequuntur magni dolores eos
+                      qui ratione voluptatem sequi nesciunt. Neque porro
+                      quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci velit.
+                    </p>
+                  </div>
+                </li>
+                <li class="job-4">
+                  <div class="timeline-line-4"></div>
+                  <div class="job-content-4">
+                    <p class="job-4-year">2015 - 2017</p>
+                    <p class="company-name-4">
+                      Company Name | 123 Anywhere St. Any City
+                    </p>
+                    <h3 class="job-4-position">Job Position Here</h3>
+                    <p class="job-4-description">
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                      enim ipsam voluptatem quia voluptas sit aspernatur aut
+                      odit aut fugit, sed quia consequuntur magni dolores eos
+                      qui ratione voluptatem sequi nesciunt. Neque porro
+                      quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci velit.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Reference part -->
+
+            <div>
+              <h2 class="reference-4">References</h2>
+              <div class="resume-reference-4">
+                <div class="ref-4">
+                  <h3 class="ref-name-4"><span>Name (Surmame)</span></h3>
+                  <p class="ref-position-4">job Position | Company Name</p>
+                  <p class="ref-phone-4">
+                    <span><b>Phone</b></span>
+                    <a href="tel:123-456-7890" class="contact-link-44"
+                      >123-456-7890</a
+                    >
+                  </p>
+                  <p class="ref-email-4">
+                    <span><b>Email</b></span>
+                    <a
+                      href="mailto:hello@domainname.com"
+                      class="contact-link-44"
+                      >hello@domainname.com</a
+                    >
+                  </p>
+                </div>
+                <div class="ref-4">
+                  <h3 class="ref-name-4"><span>Name (Surmame)</span></h3>
+                  <p class="ref-position-4">job Position | Company Name</p>
+                  <p class="ref-phone-4">
+                    <span><b>Phone</b></span>
+                    <a href="tel:123-456-7890" class="contact-link-44"
+                      >123-456-7890</a
+                    >
+                  </p>
+                  <p class="ref-email-4">
+                    <span><b>Email</b></span>
+                    <a
+                      href="mailto:hello@domainname.com"
+                      class="contact-link-44"
+                      >hello@domainname.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--right portion ends here-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
